@@ -1,0 +1,22 @@
+{
+    "name": "Sepia Toned Plugin",
+    "version": "1.0",
+    "description": "This plugin makes websites appear sepia toned.",
+    "permissions": [
+      "activeTab",
+      "declarativeContent"
+    ],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "manifest_version": 2,
+    "content_scripts": [
+      {
+        "matches": ["*://*/*"],
+        "css": ["sepia.css"],
+        "run_at": "document_idle"
+      }
+    ]
+  }
+  
